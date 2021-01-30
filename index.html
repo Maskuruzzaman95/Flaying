@@ -41,7 +41,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" type="date" name="" >
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -51,7 +51,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input id="first-count" class="inp-style inp-width" type="number" >
+                    <input id="first-count" class="inp-style inp-width" type="number" value="0" >
                 </div>
                 <div class="plus-minus-btn">
                     <button id = first-increase > + </button>
@@ -62,7 +62,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id ="economy-count" class="inp-style inp-width" type="number" >
+                    <input id ="economy-count" class="inp-style inp-width" type="number" value="0" >
                     
                 </div> 
                    <div class= "plus-minus-btn">
@@ -96,6 +96,7 @@
                     </div>
                     <div class="right">
                         <p id="total">$0</p>
+                        
                     </div>
                 </div>
             </div>
@@ -111,26 +112,26 @@
     <script>
 //  <!-- ticket-increase" -->
 
-    // document.getElementById('ticket-increase').addEventListener('click',function() {
-    //    const caseInput = document.getElementById('case-count');
-    //    const caseCount = parseInt(caseInput.value);
-    //    const caseNewCount  = caseCount + 1;
-    //    caseInput.value = caseNewCount;
-    //    const caseTotal = caseNewCount *100;
-    //    document.getElementById('case-total').innerText=(caseTotal);
+    document.getElementById('ticket-increase').addEventListener('click',function() {
+       const caseInput = document.getElementById('case-count');
+       const caseCount = parseInt(caseInput.value);
+       const caseNewCount  = caseCount + 1;
+       caseInput.value = caseNewCount;
+       const caseTotal = caseNewCount *100;
+       document.getElementById('case-total').innerText=(caseTotal);
        
-    // })
+    })
 
-    // //-ticket-decrese
-    // document.getElementById('ticket-decrese').addEventListener('click',function() {
-    //    const caseInput = document.getElementById('case-count');
-    //    const caseCount = parseInt(caseInput.value);
-    //    const caseNewCount  = caseCount-1;
-    //    caseInput.value = caseNewCount;
-    //    const caseTotal = caseNewCount *100;
-    //    document.getElementById('case-total').innerText=(caseTotal);
+    //-ticket-decrese
+    document.getElementById('ticket-decrese').addEventListener('click',function() {
+       const caseInput = document.getElementById('case-count');
+       const caseCount = parseInt(caseInput.value);
+       const caseNewCount  = caseCount-1;
+       caseInput.value = caseNewCount;
+       const caseTotal = caseNewCount *100;
+       document.getElementById('case-total').innerText=(caseTotal);
        
-    // })
+    })
     
     document.getElementById("ticket-increase").addEventListener("click",function(){
     EconomyTicketChange(true);
@@ -142,7 +143,7 @@
 
     function EconomyTicketChange(isIncrease) {
         const economyInput = document.getElementById('economy-count');
-       const economyCount = parseInt(economyInput.value); 
+       const economyCount = parseInt(economyInput.value ); 
        let economyNewCount = economyCount;
        if(isIncrease==true) {
         economyNewCount  = economyCount + 1; 
@@ -154,7 +155,7 @@
        economyInput.value = economyNewCount;
        const economyTotal = economyNewCount *100;
       document.getElementById('ticket-total').innerText='$' + (economyTotal);
-       calculateTotal();
+        calculateTotal();
     }
 
   //first class ticket

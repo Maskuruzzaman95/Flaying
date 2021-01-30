@@ -111,7 +111,7 @@ nav ul li a:hover, a.active{
     display: block;
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     color: #fff;
     font-weight: 500;
@@ -122,25 +122,25 @@ nav ul li a:hover, a.active{
     justify-content: space-between;
 }
 #ticket-increase{
-    background-color:green;
+    background-color:rgb(52, 35, 85);
     margin-right:2px;
     padding:5px;
     font-size:15px;
     color:white;
-    border-radius: 5px;
+    border-radius: 2px;
 
 }
 #ticket-decrese{
-    background-color:rgb(197, 35, 13);
+    background-color:rgb(24, 15, 14);
     margin-right:10px;
     padding:5px;
     font-size:15px;
     color:white;
-    border-radius: 5px;
+    border-radius: 2px;
 
 }
 #first-increase {
-    background-color:rgb(33, 19, 224);
+    background-color:rgb(25, 21, 85);
     margin-right:auto;
     padding:5px;
     font-size:15;
@@ -151,8 +151,8 @@ nav ul li a:hover, a.active{
 }
 
  #first-decrese {
-    background-color:rgb(197, 35, 13);
-    margin-right:auto;
+    background-color:rgb(148, 87, 79);
+    
     padding:5px;
     font-size:10px;
     color:white;
